@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FormEventHandler, useState } from 'react'
 
 import '../styles/tasklist.scss'
 
@@ -14,16 +14,40 @@ export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
-  function handleCreateNewTask() {
-    // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+  function handleCreateNewTask(event: any) {
+    event.preventDefault();
+
+    if (!newTaskTitle.trim()) return;
+
+    const newTask: Task = {
+      id: new Date().getTime(),
+      title: newTaskTitle.trim(),
+      isComplete: false
+    };
+
+    setTasks([...tasks, newTask]);
+    setNewTaskTitle('');
   }
 
   function handleToggleTaskCompletion(id: number) {
-    // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+    const newTasks = tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task,
+          isComplete: !task.isComplete
+        };
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
   }
 
   function handleRemoveTask(id: number) {
-    // Remova uma task da listagem pelo ID
+    const filteredTasks = tasks.filter(task => task.id !== id);
+
+    setTasks(filteredTasks);
   }
 
   return (
@@ -31,7 +55,7 @@ export function TaskList() {
       <header>
         <h2>Minhas tasks</h2>
 
-        <div className="input-group">
+        <form onSubmit={handleCreateNewTask} className="input-group">
           <input 
             type="text" 
             placeholder="Adicionar novo todo" 
@@ -41,7 +65,7 @@ export function TaskList() {
           <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
             <FiCheckSquare size={16} color="#fff"/>
           </button>
-        </div>
+        </form>
       </header>
 
       <main>
