@@ -31,6 +31,7 @@ These instructions will get you a copy of the project up and running on your loc
 - [Yarn](https://yarnpkg.com/getting-started/install) - Packager manager
 
 What things you need to install the software and how to install them
+
 https
 ```
 git clone https://github.com/lcoalves/ignite-conceitos-reactjs.git
@@ -47,23 +48,23 @@ A step by step series of examples that tell you how to get a development env run
 #### Databases
 First install dependencies
 ```
-$> cd ignite-conceitos-reactjs && yarn
+cd ignite-conceitos-reactjs && yarn
 ```
 Next open the code
 ```
-$> code .
+code .
 ```
 
 #### Front-end
 Start front-end service
 ```
-$> yarn dev
+yarn dev
 ```
 
 #### Front-end (Running TESTS)
 Run
 ```
-$> yarn test
+yarn test
 ```
 
 ## Built With
