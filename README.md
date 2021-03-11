@@ -5,7 +5,7 @@
 <h3 align="center">
   Desafio 01 Ignite Rocketseat: Conceitos ReactJS.
   <br>
-  Acima construido uma aplicação que cria, marca e remove 'to.dos'.
+  Acima foi construido uma aplicação que cria, marca e remove 'to.dos'.
 </h3>
 
 <p align="center">
