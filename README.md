@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Desafio 01 Ignite Conceitos ReactJS" title="Desafio 01 Ignite Conceitos ReactJS" src=".github/gostack-react.png" width="200px" />
+  <img alt="Desafio 01 Ignite Conceitos ReactJS" title="Desafio 01 Ignite Conceitos ReactJS" src=".github/ignite.png" width="800px" />
 </h1>
 
 <h3 align="center">
@@ -7,6 +7,8 @@
   <br>
   Acima foi construido uma aplicação que cria, marca e remove 'to.dos'.
 </h3>
+
+<p align="center">Challenge: <a href="https://www.notion.so/Desafio-01-Conceitos-do-React-51e4099a6e2f4d4bae94f9fe75bb769d">click here</a></p>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lcoalves/ignite-conceitos-reactjs?color=%2304D361">
